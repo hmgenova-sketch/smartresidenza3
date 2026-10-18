@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Residenza Genova – compilazione PDF</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wide">
+  <h1>Residenza Genova – compilazione PDF</h1>
+  <p class="sub">Compila solo i campi che ti servono: nessun campo è obbligatorio. Alla fine premi Stampa e ottieni un unico PDF con tutti i moduli compilati. <span lang="en">Fill in only what you need – every field is optional. At the end press Print to get one combined PDF.</span></p>
+  <nav class="jump" id="jump"></nav>
+  <div id="docs"></div>
+  <div class="bar">
+    <button id="print" type="button">Stampa / Print</button>
+    <button id="dl" type="button" class="alt">Scarica PDF / Download</button>
+  </div>
+  <div id="msg" role="status"></div>
+  <p class="note"><button id="clear" type="button" class="sm danger">Cancella tutto / Clear all</button></p>
+  <footer>I dati restano sul tuo dispositivo: nessuna informazione viene inviata a un server.</footer>
+</main>
+<script src="lib/pdf-lib.min.js"></script>
+<script src="lib/fontkit.umd.min.js"></script>
+<script>
+if (!window.PDFLib) document.write('<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"><\/script>');
+if (!window.fontkit) document.write('<script src="https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js"><\/script>');
+</script>
+<script src="app.js"></script>
+</body>
+</html>

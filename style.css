@@ -1,0 +1,57 @@
+:root { --bg:#f5f6f8; --card:#fff; --ink:#1c2230; --muted:#6b7385; --line:#d9dde5; --accent:#1f5fd6; --err:#b3261e; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#12151c; --card:#1b2030; --ink:#e8ebf2; --muted:#98a1b5; --line:#2e3547; --accent:#5b9bff; --err:#ff8a80; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+main { max-width:680px; margin:0 auto; padding:24px 16px 48px; }
+h1 { font-size:1.35rem; margin:0 0 4px; }
+p.sub { margin:0 0 20px; color:var(--muted); font-size:.92rem; }
+a.back { display:inline-block; margin:0 0 14px; color:var(--accent); text-decoration:none; font-size:.9rem; }
+a.back:hover { text-decoration:underline; }
+fieldset { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:8px 16px 16px; margin:0 0 16px; }
+legend { font-weight:600; padding:0 6px; }
+.note { margin:8px 0 0; color:var(--muted); font-size:.85rem; }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:0 12px; }
+.full { grid-column:1 / -1; }
+@media (max-width:560px) { .grid { grid-template-columns:1fr; } }
+label { display:block; margin:12px 0 0; font-weight:500; font-size:.95rem; }
+small { display:block; color:var(--muted); font-weight:400; font-size:.8rem; }
+input, select, textarea { width:100%; margin-top:6px; padding:10px 12px; font:inherit; color:inherit; background:var(--bg); border:1px solid var(--line); border-radius:8px; }
+input:focus, select:focus, textarea:focus { outline:2px solid var(--accent); outline-offset:1px; }
+input.bad, select.bad, textarea.bad { border-color:var(--err); }
+button { width:100%; padding:14px; font:inherit; font-weight:600; color:#fff; background:var(--accent); border:0; border-radius:10px; cursor:pointer; }
+button:disabled { opacity:.6; cursor:wait; }
+#msg { margin:12px 0 0; min-height:1.4em; font-size:.92rem; }
+#msg.err { color:var(--err); }
+details { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 16px; margin:0 0 16px; }
+summary { cursor:pointer; font-weight:600; }
+.pv { font-size:.85rem; color:var(--muted); margin:10px 0 0; }
+.pv b { color:var(--ink); }
+footer { margin-top:20px; color:var(--muted); font-size:.8rem; text-align:center; }
+.cards { display:grid; gap:14px; margin-top:8px; }
+a.card { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 18px 16px; color:inherit; text-decoration:none; }
+a.card:hover, a.card:focus-visible { border-color:var(--accent); outline:none; box-shadow:0 0 0 2px var(--accent); }
+a.card h2 { margin:0 0 4px; font-size:1.1rem; }
+a.card p { margin:0; color:var(--muted); font-size:.9rem; }
+a.card .go { display:inline-block; margin-top:12px; font-weight:600; color:var(--accent); font-size:.92rem; }
+
+/* ---- multi-document filler ---- */
+main.wide { max-width:860px; }
+h2.doc { font-size:1.15rem; margin:30px 0 4px; padding-top:10px; border-top:2px solid var(--line); }
+.page-head { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; margin:2px 0 4px; }
+.page-head b { margin-right:auto; }
+.page-head label { display:flex; gap:6px; align-items:center; margin:0; font-weight:400; font-size:.85rem; }
+.page-head input { width:auto; margin:0; }
+button.sm { width:auto; padding:6px 12px; font-size:.85rem; }
+button.ghost { background:transparent; color:var(--accent); border:1px solid var(--accent); }
+button.danger { background:transparent; color:var(--err); border:1px solid var(--err); }
+.badge { background:var(--accent); color:#fff; border-radius:99px; padding:1px 9px; font-size:.75rem; font-weight:600; }
+h3.sec { font-size:.95rem; margin:18px 0 0; color:var(--muted); font-weight:600; }
+label.chk { display:flex; gap:10px; align-items:flex-start; font-weight:500; }
+label.chk input { width:auto; margin:4px 0 0; }
+.bar { position:sticky; bottom:0; display:flex; gap:10px; padding:12px 0; background:var(--bg); border-top:1px solid var(--line); }
+.bar button { flex:1; }
+.bar .alt { background:var(--card); color:var(--accent); border:1px solid var(--accent); }
+nav.jump { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 6px; }
+nav.jump a { font-size:.8rem; padding:4px 10px; border:1px solid var(--line); border-radius:99px; text-decoration:none; color:var(--accent); background:var(--card); }
